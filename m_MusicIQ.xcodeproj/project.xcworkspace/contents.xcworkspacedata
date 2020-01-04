@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:m_MusicIQ.xcodeproj">
+      location = "group:MusicIQ_All_Songs.json">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

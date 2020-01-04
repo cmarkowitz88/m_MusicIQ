@@ -35,15 +35,15 @@
         <!--Item 1-->
         <scene sceneID="wp8-cx-30h">
             <objects>
-                <viewController id="hz8-jk-KO7" sceneMemberID="viewController">
+                <viewController id="hz8-jk-KO7" customClass="GameViewController" customModule="m_MusicIQ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AZZ-TW-iut">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMK-6S-bUf">
-                                <rect key="frame" x="62" y="274" width="46" height="21"/>
+                                <rect key="frame" x="128" y="262" width="249" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -52,10 +52,13 @@
                         <viewLayoutGuide key="safeArea" id="OoQ-gX-B2w"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Jvs-WH-0et"/>
+                    <connections>
+                        <outlet property="lblHello" destination="oMK-6S-bUf" id="Htq-cc-AKb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RF5-99-QIX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-154" y="-434"/>
+            <point key="canvasLocation" x="-155.07246376811597" y="-434.59821428571428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ds1-Ti-pjY">
