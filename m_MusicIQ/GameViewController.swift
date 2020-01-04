@@ -12,12 +12,17 @@ class GameViewController: UIViewController {
 
     @IBOutlet weak var lblHello: UILabel!
     let fileName = "MusicIQ_All_Songs"
+    let obj_common = Common(debug_mode: true)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.lblHello.text = "Hello to the world"
-        self.readJsonFile()
+        
+        // If we are not connected to the internet we can read the static JSON file, otherwise call AWS to get data
+        if (self.obj_common.debug_mode == true){
+            self.readJsonFile()
+        }
     }
     
     func readJsonFile(){
@@ -25,11 +30,8 @@ class GameViewController: UIViewController {
             do{
                 let decoder = JSONDecoder()
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 let decoded = try decoder.decode(FullResponse.self, from: data)
                 print(decoded)
-               
-                print(data)
             } catch{
                 print("error: \(error)")
             }
