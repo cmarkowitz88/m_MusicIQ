@@ -11,7 +11,7 @@ import Foundation
 class Common {
     var debug_mode: Bool
     
-    init(debug_mode: Bool){
-        self.debug_mode = debug_mode
+    init(value: Bool){
+        self.debug_mode = value
     }
 }

@@ -26,6 +26,11 @@ struct FullResponse: Codable {
         var ID: String
         var Created: String
     }
+    
+    init(){
+        statusCode = 0
+        body = []
+    }
 }
 
 

@@ -11,23 +11,34 @@ import UIKit
 
 class GameViewController: UIViewController {
 
-    @IBOutlet weak var lblHello: UILabel!
     
+    @IBOutlet weak var lblQuestion: UILabel!
     let fileName = "MusicIQ_All_Songs"
     let obj_common = Common(debug_mode: true)
     
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.lblHello.text = "Hello to the world"
         
-        // If we are not connected to the internet we can read the static JSON file, otherwise call AWS to get data
+        super.viewDidLoad()
+        var full_question_list = FullResponse()
+        // Do any additional setup after loading the view.
+                
+        // If we are not connected to the internet we can read the static JSON file, otherwise call AWS to get data.
         if (self.obj_common.debug_mode == true){
-            let full_question_list = self.readJsonFile()
+            full_question_list = self.readJsonFile()
             print(full_question_list)
         }
+        
+        self.setUpUI(questions: full_question_list)
     }
     
+    func setUpUI(questions: Any){
+       
+        let theLabel = UILabel()
+        theLabel.frame = CGRect(x: 10, y: 50, width:200, height: 21)
+        theLabel.text = "hello"
+          
+    }
     func readJsonFile() -> FullResponse{
         var questions:FullResponse? = nil
 
