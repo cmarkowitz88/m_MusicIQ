@@ -25,6 +25,21 @@ struct FullResponse: Codable {
         var Track_Length: String
         var ID: String
         var Created: String
+        
+        init(){
+            Level = ""
+            File_Path = ""
+            Answer4 = ""
+            Answer3 = ""
+            Answer2 = ""
+            Answer1 = ""
+            Score = 0
+            Question = ""
+            Hint = ""
+            Track_Length = ""
+            ID = ""
+            Created = ""
+        }
     }
     
     init(){

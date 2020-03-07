@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4034020B23C147890079B068 /* MusicIQ_All_Songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 4034020A23C147890079B068 /* MusicIQ_All_Songs.json */; };
+		4065A2B22413224B00D6B70A /* MusicIQ-Logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4065A2B12413224A00D6B70A /* MusicIQ-Logo.jpg */; };
 		40BAF0E123C14C72003B528A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAF0E023C14C72003B528A /* Common.swift */; };
 		40DB02C223B3CC45003436F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DB02C123B3CC45003436F6 /* AppDelegate.swift */; };
 		40DB02C423B3CC45003436F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DB02C323B3CC45003436F6 /* SceneDelegate.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		4034020A23C147890079B068 /* MusicIQ_All_Songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MusicIQ_All_Songs.json; sourceTree = "<group>"; };
+		4065A2B12413224A00D6B70A /* MusicIQ-Logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MusicIQ-Logo.jpg"; sourceTree = "<group>"; };
 		40BAF0E023C14C72003B528A /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		40DB02BE23B3CC45003436F6 /* m_MusicIQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = m_MusicIQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40DB02C123B3CC45003436F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				40DB02D723B3CC47003436F6 /* m_MusicIQTests */,
 				40DB02E223B3CC47003436F6 /* m_MusicIQUITests */,
 				40DB02BF23B3CC45003436F6 /* Products */,
+				4065A2B12413224A00D6B70A /* MusicIQ-Logo.jpg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,6 +271,7 @@
 				4034020B23C147890079B068 /* MusicIQ_All_Songs.json in Resources */,
 				40DB02CE23B3CC47003436F6 /* LaunchScreen.storyboard in Resources */,
 				40DB02CB23B3CC47003436F6 /* Assets.xcassets in Resources */,
+				4065A2B22413224B00D6B70A /* MusicIQ-Logo.jpg in Resources */,
 				40DB02C923B3CC45003436F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

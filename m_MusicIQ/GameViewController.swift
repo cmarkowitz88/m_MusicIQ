@@ -10,17 +10,19 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
     
+    // Properties
     @IBOutlet weak var lblQuestion: UILabel!
-    let fileName = "MusicIQ_All_Songs"
-    let obj_common = Common(debug_mode: true)
     
+    let obj_common = Common(value: true)
+    var full_question_list = FullResponse()
+    var song_list = FullResponse.Song()
+    var song_counter = 0
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        var full_question_list = FullResponse()
+       
         // Do any additional setup after loading the view.
                 
         // If we are not connected to the internet we can read the static JSON file, otherwise call AWS to get data.
@@ -28,21 +30,49 @@ class GameViewController: UIViewController {
             full_question_list = self.readJsonFile()
             print(full_question_list)
         }
-        
-        self.setUpUI(questions: full_question_list)
+       
+        self.showQuestion(questions: full_question_list)
     }
     
-    func setUpUI(questions: Any){
-       
-        let theLabel = UILabel()
-        theLabel.frame = CGRect(x: 10, y: 50, width:200, height: 21)
-        theLabel.text = "hello"
+    func showQuestion(questions: FullResponse){
+        lblQuestion.text = "hello"
+        lblQuestion.contentMode = .scaleToFill
+        lblQuestion.numberOfLines = 0
+        
+        /* for question in questions.body{
+            print(question)
+        }
+        print(questions) */
+        
+        lblQuestion.text = questions.body[0].Question as String
+        self.createButtons(text: "hello")
           
     }
+    
+    func createButtons(text: String){
+        
+        var x: Int
+        var y: Int
+        var count = 0
+        let numButtons = 4
+        
+        x = 30
+        y = 250
+        while count < numButtons{
+          let button = UIButton()
+          button.frame = CGRect(x:x,y:y, width:350, height:40)
+            button.backgroundColor = UIColor.gray
+          view.addSubview(button)
+          y = y + 60
+          count = count + 1
+           
+        }
+    }
+    
     func readJsonFile() -> FullResponse{
-        var questions:FullResponse? = nil
+        var questions = FullResponse()
 
-        if let path = Bundle.main.path(forResource: fileName, ofType: "json"){
+        if let path = Bundle.main.path(forResource: obj_common.file_name, ofType: "json"){
             do{
                 let decoder = JSONDecoder()
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
@@ -54,9 +84,9 @@ class GameViewController: UIViewController {
             }
          
         }
-     return questions!
+        
+     return questions
+        
     }
-
-
 }
 

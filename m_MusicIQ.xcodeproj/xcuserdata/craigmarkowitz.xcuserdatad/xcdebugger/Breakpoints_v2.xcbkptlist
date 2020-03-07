@@ -14,8 +14,8 @@
             filePath = "m_MusicIQ/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,10 +30,57 @@
             filePath = "m_MusicIQ/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "GameViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A4FE1AB6-11F1-44E7-AE65-72DDCCB91671 - 17ae81002d6eee7a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "m_MusicIQ.GameViewController.obj_common.getter : m_MusicIQ.Common"
+                  moduleName = "m_MusicIQ"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/craigmarkowitz/Documents/Development/m_Music_IQ/m_MusicIQ/m_MusicIQ/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "A4FE1AB6-11F1-44E7-AE65-72DDCCB91671 - b804d8622e8b745e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "m_MusicIQ.GameViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; m_MusicIQ.GameViewController"
+                  moduleName = "m_MusicIQ"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/craigmarkowitz/Documents/Development/m_Music_IQ/m_MusicIQ/m_MusicIQ/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "A4FE1AB6-11F1-44E7-AE65-72DDCCB91671 - 830276daa017a655"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "m_MusicIQ.GameViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;m_MusicIQ.GameViewController&gt;"
+                  moduleName = "m_MusicIQ"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/craigmarkowitz/Documents/Development/m_Music_IQ/m_MusicIQ/m_MusicIQ/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "277">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,8 +93,8 @@
             filePath = "m_MusicIQ/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +109,8 @@
             filePath = "m_MusicIQ/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "readJsonFile()"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +125,8 @@
             filePath = "m_MusicIQ/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "readJsonFile()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,9 +141,25 @@
             filePath = "m_MusicIQ/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "readJsonFile()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71478B42-A4C1-4AEE-B222-9C802005C726"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "m_MusicIQ/GameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "showQuestion(questions:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
