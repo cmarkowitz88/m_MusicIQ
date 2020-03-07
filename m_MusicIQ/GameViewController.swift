@@ -38,6 +38,7 @@ class GameViewController: UIViewController {
         lblQuestion.text = "hello"
         lblQuestion.contentMode = .scaleToFill
         lblQuestion.numberOfLines = 0
+        var answerAry:[String] = [questions.body[0].Answer1, questions.body[0].Answer2, questions.body[0].Answer3,                                questions.body[0].Answer4]
         
         /* for question in questions.body{
             print(question)
@@ -59,12 +60,17 @@ class GameViewController: UIViewController {
         x = 30
         y = 250
         while count < numButtons{
-          let button = UIButton()
-          button.frame = CGRect(x:x,y:y, width:350, height:40)
+            let button = UIButton()
+            button.setTitle("Hello", for: .normal)
+            button.frame = CGRect(x:x,y:y, width:350, height:50)
             button.backgroundColor = UIColor.gray
-          view.addSubview(button)
-          y = y + 60
-          count = count + 1
+            button.layer.cornerRadius = 8
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.black.cgColor
+            view.addSubview(button)
+            y = y + 70
+            count = count + 1
+            
            
         }
     }
