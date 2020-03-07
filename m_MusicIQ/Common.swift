@@ -9,11 +9,11 @@
 import Foundation
 
 class Common {
-    var debug_mode: Bool
+    var offline_mode: Bool
     var file_name: String
     
     init(value: Bool){
-        self.debug_mode = value
+        self.offline_mode = value
         self.file_name = "MusicIQ_All_Songs"
     }
 }

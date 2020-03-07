@@ -8,6 +8,7 @@
 // Download all songs from AWS: aws2 s3 cp s3://music-iq.audio /Users/craigmarkowitz/Documents/Development/m_Music_IQ/m_MusicIQ/Audio --recursive
 
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController {
     
@@ -18,6 +19,8 @@ class GameViewController: UIViewController {
     var full_question_list = FullResponse()
     var song_list = FullResponse.Song()
     var song_counter = 0
+    var avPlayer: AVAudioPlayer!
+    
     
     override func viewDidLoad() {
         
@@ -26,9 +29,12 @@ class GameViewController: UIViewController {
         // Do any additional setup after loading the view.
                 
         // If we are not connected to the internet we can read the static JSON file, otherwise call AWS to get data.
-        if (self.obj_common.debug_mode == true){
+        if (self.obj_common.offline_mode == true){
             full_question_list = self.readJsonFile()
             print(full_question_list)
+        }
+        else{
+            // Get question list from AWS
         }
        
         self.showQuestion(questions: full_question_list)
@@ -38,7 +44,7 @@ class GameViewController: UIViewController {
         lblQuestion.text = "hello"
         lblQuestion.contentMode = .scaleToFill
         lblQuestion.numberOfLines = 0
-        var answerAry:[String] = [questions.body[0].Answer1, questions.body[0].Answer2, questions.body[0].Answer3,                                questions.body[0].Answer4]
+        let answerAry:[String] = [questions.body[0].Answer1, questions.body[0].Answer2, questions.body[0].Answer3,                                questions.body[0].Answer4]
         
         /* for question in questions.body{
             print(question)
@@ -46,32 +52,64 @@ class GameViewController: UIViewController {
         print(questions) */
         
         lblQuestion.text = questions.body[0].Question as String
-        self.createButtons(text: "hello")
+        self.createButtons(answers: answerAry)
+        self.playAudio(audioClipName: questions.body[0].File_Path)
           
     }
     
-    func createButtons(text: String){
+    func createButtons(answers: [String]){
         
         var x: Int
         var y: Int
         var count = 0
         let numButtons = 4
+        let imageName = "button-highlighted-image.jpeg"
+        let image = UIImage(named: imageName)
         
         x = 30
         y = 250
         while count < numButtons{
             let button = UIButton()
-            button.setTitle("Hello", for: .normal)
+            button.setTitle(answers[count], for: .normal)
             button.frame = CGRect(x:x,y:y, width:350, height:50)
             button.backgroundColor = UIColor.gray
             button.layer.cornerRadius = 8
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.black.cgColor
+            button.setBackgroundImage(image, for: UIControl.State.highlighted)
+            
+            button.addTarget(self,
+                             action: #selector(checkAnswer),
+                             for: .touchUpInside
+            )
             view.addSubview(button)
             y = y + 70
             count = count + 1
-            
-           
+        }
+       
+    }
+    
+    @objc func checkAnswer(srcObj: UIButton){
+        print("Cllicked something")
+        
+    }
+
+    
+    func playAudio(audioClipName: String){
+        if(obj_common.offline_mode){
+           // For dev use the files in Audio folder
+            let path = Bundle.main.path(forResource: audioClipName, ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            do{
+                avPlayer = try AVAudioPlayer(contentsOf: url)
+                avPlayer?.play()
+            }
+            catch{
+                print("Error loading file.")
+            }
+        }
+        else{
+          // Stream the audio from AWS S3 Bucker
         }
     }
     
