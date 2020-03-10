@@ -12,8 +12,8 @@ class Common {
     var offline_mode: Bool
     var file_name: String
     
-    init(value: Bool){
-        self.offline_mode = value
-        self.file_name = "MusicIQ_All_Songs"
+    init(_offline_mode: Bool){
+        self.offline_mode = _offline_mode
+        self.file_name = "MusicIQ_All_Songs2"
     }
 }

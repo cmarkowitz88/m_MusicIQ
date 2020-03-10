@@ -15,12 +15,12 @@ class GameViewController: UIViewController {
     // Properties
     @IBOutlet weak var lblQuestion: UILabel!
     
-    let obj_common = Common(value: true)
+    let obj_common = Common(_offline_mode: true)
     var full_question_list = FullResponse()
     var song_list = FullResponse.Song()
-    var song_counter = 0
+    var song_count = 0
     var avPlayer: AVAudioPlayer!
-    
+    var correct_answer: String = ""
     
     override func viewDidLoad() {
         
@@ -41,23 +41,23 @@ class GameViewController: UIViewController {
     }
     
     func showQuestion(questions: FullResponse){
-        lblQuestion.text = "hello"
         lblQuestion.contentMode = .scaleToFill
         lblQuestion.numberOfLines = 0
-        let answerAry:[String] = [questions.body[0].Answer1, questions.body[0].Answer2, questions.body[0].Answer3,                                questions.body[0].Answer4]
+        let answerAry:[String] = [questions.body[song_count].Answer1, questions.body[song_count].Answer2,           questions.body[song_count].Answer3, questions.body[song_count].Answer4]
+        correct_answer = questions.body[song_count].Correct_Answer
         
         /* for question in questions.body{
             print(question)
         }
         print(questions) */
         
-        lblQuestion.text = questions.body[0].Question as String
-        self.createButtons(answers: answerAry)
-        self.playAudio(audioClipName: questions.body[0].File_Path)
+        lblQuestion.text = questions.body[song_count].Question as String
+        self.createButtons(answers: answerAry, correct_answer: correct_answer)
+        self.playAudio(audioClipName: questions.body[song_count].File_Path)
           
     }
     
-    func createButtons(answers: [String]){
+    func createButtons(answers: [String], correct_answer: String){
         
         var x: Int
         var y: Int
@@ -69,7 +69,7 @@ class GameViewController: UIViewController {
         x = 30
         y = 250
         while count < numButtons{
-            let button = UIButton()
+            let button = AnswerButton()
             button.setTitle(answers[count], for: .normal)
             button.frame = CGRect(x:x,y:y, width:350, height:50)
             button.backgroundColor = UIColor.gray
@@ -77,7 +77,12 @@ class GameViewController: UIViewController {
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.black.cgColor
             button.setBackgroundImage(image, for: UIControl.State.highlighted)
-            
+            if answers[count] == correct_answer{
+               button.answer = correct_answer
+            }
+            else{
+                button.answer = nil
+            }
             button.addTarget(self,
                              action: #selector(checkAnswer),
                              for: .touchUpInside
@@ -89,8 +94,13 @@ class GameViewController: UIViewController {
        
     }
     
-    @objc func checkAnswer(srcObj: UIButton){
-        print("Cllicked something")
+    @objc func checkAnswer(srcObj: AnswerButton){
+        print("Clicked Answer Button")
+        
+        if(srcObj.answer == self.correct_answer)
+        {
+            print("You got it!!")
+        }
         
     }
 

@@ -224,6 +224,8 @@
 		4065A45D2413EECA00D6B70A /* 12300010.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4065A3872413EEC900D6B70A /* 12300010.wav */; };
 		4065A45E2413EECA00D6B70A /* 500060.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4065A3882413EEC900D6B70A /* 500060.wav */; };
 		4065A4622413FFCE00D6B70A /* button-highlighted-image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4065A4612413FFCE00D6B70A /* button-highlighted-image.jpeg */; };
+		4065A466241410C900D6B70A /* MusicIQ_All_Songs2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4065A465241410C900D6B70A /* MusicIQ_All_Songs2.json */; };
+		4065A468241856BA00D6B70A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4065A467241856BA00D6B70A /* CustomButton.swift */; };
 		40BAF0E123C14C72003B528A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAF0E023C14C72003B528A /* Common.swift */; };
 		40DB02C223B3CC45003436F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DB02C123B3CC45003436F6 /* AppDelegate.swift */; };
 		40DB02C423B3CC45003436F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DB02C323B3CC45003436F6 /* SceneDelegate.swift */; };
@@ -471,6 +473,8 @@
 		4065A3872413EEC900D6B70A /* 12300010.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 12300010.wav; sourceTree = "<group>"; };
 		4065A3882413EEC900D6B70A /* 500060.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 500060.wav; sourceTree = "<group>"; };
 		4065A4612413FFCE00D6B70A /* button-highlighted-image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "button-highlighted-image.jpeg"; sourceTree = "<group>"; };
+		4065A465241410C900D6B70A /* MusicIQ_All_Songs2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MusicIQ_All_Songs2.json; sourceTree = "<group>"; };
+		4065A467241856BA00D6B70A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		40BAF0E023C14C72003B528A /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		40DB02BE23B3CC45003436F6 /* m_MusicIQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = m_MusicIQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40DB02C123B3CC45003436F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -517,6 +521,7 @@
 		4034020723C146F50079B068 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4065A465241410C900D6B70A /* MusicIQ_All_Songs2.json */,
 				4034020A23C147890079B068 /* MusicIQ_All_Songs.json */,
 			);
 			path = Data;
@@ -779,6 +784,7 @@
 				40DB02CA23B3CC47003436F6 /* Assets.xcassets */,
 				40DB02CC23B3CC47003436F6 /* LaunchScreen.storyboard */,
 				40DB02CF23B3CC47003436F6 /* Info.plist */,
+				4065A467241856BA00D6B70A /* CustomButton.swift */,
 			);
 			path = m_MusicIQ;
 			sourceTree = "<group>";
@@ -938,6 +944,7 @@
 				4065A3A22413EEC900D6B70A /* 5687563.wav in Resources */,
 				4065A3DC2413EECA00D6B70A /* 50004001.wav in Resources */,
 				4065A4432413EECA00D6B70A /* 12300023.wav in Resources */,
+				4065A466241410C900D6B70A /* MusicIQ_All_Songs2.json in Resources */,
 				4065A3FA2413EECA00D6B70A /* 90000099.wav in Resources */,
 				4065A4262413EECA00D6B70A /* 89895656.wav in Resources */,
 				4065A3C22413EECA00D6B70A /* 2003363.wav in Resources */,
@@ -1159,6 +1166,7 @@
 			files = (
 				40DB02F823C0FB2A003436F6 /* Songs.swift in Sources */,
 				40DB02C623B3CC45003436F6 /* GameViewController.swift in Sources */,
+				4065A468241856BA00D6B70A /* CustomButton.swift in Sources */,
 				40DB02C223B3CC45003436F6 /* AppDelegate.swift in Sources */,
 				40BAF0E123C14C72003B528A /* Common.swift in Sources */,
 				40DB02C423B3CC45003436F6 /* SceneDelegate.swift in Sources */,

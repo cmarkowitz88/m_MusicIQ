@@ -19,6 +19,7 @@ struct FullResponse: Codable {
         var Answer3: String
         var Answer2: String
         var Answer1: String
+        var Correct_Answer: String
         var Score: Int
         var Question: String
         var Hint: String
@@ -33,6 +34,7 @@ struct FullResponse: Codable {
             Answer3 = ""
             Answer2 = ""
             Answer1 = ""
+            Correct_Answer = ""
             Score = 0
             Question = ""
             Hint = ""
