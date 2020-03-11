@@ -54,7 +54,21 @@ class GameViewController: UIViewController {
         lblQuestion.text = questions.body[song_count].Question as String
         self.createButtons(answers: answerAry, correct_answer: correct_answer)
         self.playAudio(audioClipName: questions.body[song_count].File_Path)
+        self.initHintSwitch()
           
+    }
+    
+    func initHintSwitch(){
+        let hint_label = UILabel(frame: CGRect(x:30, y:540, width:200, height:40))
+        hint_label.contentMode = .scaleToFill
+        hint_label.numberOfLines = 0
+        hint_label.textColor = UIColor.white
+        hint_label.text = "Show Hint"
+        view.addSubview(hint_label)
+        
+        let hint_switch = UISwitch(frame:CGRect(x: 130, y: 545, width: 0, height: 0))
+        hint_switch.setOn(false, animated: true)
+        view.addSubview(hint_switch)
     }
     
     func createButtons(answers: [String], correct_answer: String){
@@ -96,10 +110,14 @@ class GameViewController: UIViewController {
     
     @objc func checkAnswer(srcObj: AnswerButton){
         print("Clicked Answer Button")
+        avPlayer?.stop()
         
         if(srcObj.answer == self.correct_answer)
         {
             print("You got it!!")
+        }
+        else{
+            print("Sorry, wrong answer!")
         }
         
     }
